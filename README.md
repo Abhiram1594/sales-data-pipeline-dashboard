@@ -52,3 +52,22 @@ sales-data-pipeline-dashboard/
 ├── requirements.txt
 ├── README.md
 └── .gitignore
+How to Run
+1. Install dependencies
+pip3 install -r requirements.txt
+2. Clean raw data
+python3 src/data_cleaning.py
+3. Create MySQL database and tables
+
+Open sql/create_tables.sql in MySQL Workbench and run the script.
+
+4. Load cleaned data into MySQL
+python3 src/load_to_mysql.py
+5. Run analytics queries from Python
+python3 src/run_analytics.py
+6. Start the dashboard
+streamlit run dashboard/dashboard.py
+Key Learning Outcomes
+
+This project demonstrates ETL pipeline development, data cleaning, MySQL database design, SQL analytics, and dashboard creation for business insights.
+
